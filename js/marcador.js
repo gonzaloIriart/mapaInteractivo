@@ -17,7 +17,17 @@ marcadorModulo = (function () {
           title: 'Mi ubicacion',
           draggable: true,
           animation: google.maps.Animation.DROP
-        })
+        });        
+        marker.addListener('click', toggleBounce);
+      }
+
+      function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      
   }
 
     // Agrega la dirección del marcador en la lista de Lugares Intermedios
