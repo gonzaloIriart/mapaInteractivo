@@ -13,7 +13,10 @@ marcadorModulo = (function () {
         El marcador que vas a crear debe asignarse a la variable miMarcador */
         miMarcador = new google.maps.Marker({
           position: {lat: ubicacion.lat,lng: ubicacion.lng},
-          map: mapa
+          map: mapa,
+          title: 'Mi ubicacion',
+          draggable: true,
+          animation: google.maps.Animation.DROP
         })
   }
 
