@@ -8,6 +8,7 @@ geocodificadorModulo = (function () {
      y que llame a la función pasada por parámetro con los siguientes parámetros
      dirección: la dirección pasada por parámetro
      coordenada: la ubicación de tipo google.maps.LatLng */
+     console.log(geocodificador.geocode({address:direccion}))
   }
 
     // Inicializo el geocoder que obtiene las corrdenadas a partir de una dirección
