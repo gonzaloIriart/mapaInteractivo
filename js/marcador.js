@@ -11,6 +11,7 @@ marcadorModulo = (function () {
         en la posición pasada por parámetro y mostrarlo en el mapa.
         Este marcador debe tener un título, una animación.
         El marcador que vas a crear debe asignarse a la variable miMarcador */
+        console.log(ubicacion)
         miMarcador = new google.maps.Marker({
           position: {lat: ubicacion.lat,lng: ubicacion.lng},
           map: mapa,
@@ -18,14 +19,14 @@ marcadorModulo = (function () {
           draggable: true,
           animation: google.maps.Animation.DROP
         });        
-        marker.addListener('click', toggleBounce);
+        miMarcador.addListener('click', toggleBounce);
       }
 
       function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-          marker.setAnimation(null);
+        if (miMarcador.getAnimation() !== null) {
+          miMarcador.setAnimation(null);
         } else {
-          marker.setAnimation(google.maps.Animation.BOUNCE);
+          miMarcador.setAnimation(google.maps.Animation.BOUNCE);
         }
       
   }
