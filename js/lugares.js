@@ -8,7 +8,7 @@ lugaresModulo = (function () {
         página (las direcciones ingresables por el usuario).
         Para esto creá un círculo con radio de 20000 metros y usalo para fijar
         los límites de la búsqueda de dirección. El círculo no se debe ver en el mapa. */
-        console.log(posicionCentral)
+        
         var circulo = new google.maps.Circle({
           center: posicionCentral,
           radius: 20000
